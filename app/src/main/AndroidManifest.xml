@@ -16,7 +16,7 @@
 
         </activity>
 
-        <service android:name=".rest.background.BackgroundService"></service>
+        <!--<service android:name=".rest.background.BackgroundService"></service>-->
     </application>
 
 </manifest>

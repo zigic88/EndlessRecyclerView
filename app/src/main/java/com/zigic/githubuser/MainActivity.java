@@ -228,6 +228,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void limitRateToast() {
+        hideDialog();
         Toast.makeText(MainActivity.this, R.string.limit_rate_notice, Toast.LENGTH_SHORT).show();
     }
 
