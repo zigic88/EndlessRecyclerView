@@ -28,6 +28,7 @@
                 android:id="@+id/tv_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cv_margin"
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@+id/img_avatar"
                 android:layout_toRightOf="@+id/img_avatar"

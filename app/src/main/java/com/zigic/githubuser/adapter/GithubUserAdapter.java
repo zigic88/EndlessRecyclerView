@@ -32,9 +32,9 @@ public class GithubUserAdapter extends RecyclerView.Adapter<GithubUserAdapter.Vi
     private boolean isLoading;
     int totalItemCount;
     int lastVisibleItem;
-    int visibleThreshold=2;
+    int visibleThreshold=1;
 
-    public GithubUserAdapter(Context mContext, List<Item> userList, final RecyclerView recyclerView) {
+    public GithubUserAdapter(Context mContext, final List<Item> userList, final RecyclerView recyclerView) {
         this.mContext = mContext;
         this.userList = userList;
 
@@ -45,17 +45,17 @@ public class GithubUserAdapter extends RecyclerView.Adapter<GithubUserAdapter.Vi
                 super.onScrolled(recyclerView, dx, dy);
                 totalItemCount = linearLayoutManager.getItemCount();
                 lastVisibleItem = linearLayoutManager.findLastVisibleItemPosition();
-
-                if (!isLoading && totalItemCount <= (lastVisibleItem + visibleThreshold)) {
-                    if (onLoadMoreListener != null) {
-                        onLoadMoreListener.onLoadMore();
+                if(totalItemCount>0){
+                    if (!isLoading && totalItemCount <= (lastVisibleItem + visibleThreshold)) {
+                        if (onLoadMoreListener != null) {
+                            onLoadMoreListener.onLoadMore();
+                        }
+                        isLoading = true;
                     }
-                    isLoading = true;
                 }
 
             }
         });
-
 
     }
 
@@ -91,7 +91,7 @@ public class GithubUserAdapter extends RecyclerView.Adapter<GithubUserAdapter.Vi
         }
     }
 
-    public void updateMerchantList(List<Item> userList) {
+    public void updateUserList(List<Item> userList) {
         this.userList = userList;
         notifyDataSetChanged();
     }

@@ -2,7 +2,8 @@
     <string name="app_name">GithubUser</string>
     <string name="search_hint">Search Github Users</string>
     <string name="foo_text">Foo Text..</string>
-    <string name="limit_rate_notice">API rate limit exceeded, this API has a limit of 10 hits per minute.</string>
+    <string name="limit_rate_notice">API rate limit exceeded, this API has a limit of 10 hits per minute. Please try again later.</string>
     <string name="try_again">Cannot connect to Github server. Please try again in a few minutes.</string>
     <string name="not_found">User not found.</string>
+    <string name="progress_dialog_text">Fetching Github User...</string>
 </resources>
